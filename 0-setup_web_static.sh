@@ -11,13 +11,13 @@ mkdir -p data/web_static/releases/test/
 mkdir -p data/web_static/shared/
 
 # create symbolic link to test folder
-sudo ln -sf $PWD/data/web_static/releases/test/ data/web_static/current
+sudo ln -sf "$PWD"/data/web_static/releases/test/ data/web_static/current
 
 # give full ownership of the data directory to ubuntu and group
-sudo chown -R ubuntu:ubuntu data *
+sudo chown -R ubuntu:ubuntu data ./*glob*
 
 # create example files to test nginx
-echo "FINALY!!! Testing nginx automatic conf." > $PWD/data/web_static/releases/test/index.html
+echo "FINALY!!! Testing nginx automatic conf." > "$PWD"/data/web_static/releases/test/index.html
 
 #
 # nginx configuration
