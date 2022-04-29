@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" 
+"""
     Fabric script generates a .tgz archive of
-    web_static folder 
+    web_static folder
 """
 from fabric.operations import local
 from datetime import datetime
