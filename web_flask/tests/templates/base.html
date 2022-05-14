@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head %}
+    <link rel="stylesheet" href="../static/style.css">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+{% endblock %}
+</head>
+<body>
+    {% block navheader %}
+    <header>
+        <div class="container">
+            <div>Home</div>
+            <div>Updates</div>
+            <div>MyAccount</div>
+            <div>Help</div>
+        </div>
+    </header>
+    {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2008 by <a href="">CarlosB</a>
+        {% endblock %}
+    </div>
+</body>
+</html>

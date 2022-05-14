@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/sayHello.css">
+{% endblock %}
+{% block content %}
+<h1>Hello {{ name }} !!</h1>
+<h2>Welcome to the web app!!</h2>
+{% endblock %}
+
