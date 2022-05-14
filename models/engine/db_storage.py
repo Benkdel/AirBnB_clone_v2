@@ -12,6 +12,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import (create_engine)
 from sqlalchemy.ext.declarative import declarative_base
 
+
 class DBStorage:
     """Class Database management"""
     __engine = None
@@ -26,12 +27,12 @@ class DBStorage:
         db_env = getenv("HBNB_ENV")
 
         self.__engine = create_engine(
-                    'mysql+mysqldb://{}:{}@{}/{}'.format(
-                            db_user,
-                            db_password,
-                            db_host,
-                            db_database),
-                    pool_pre_ping=True)
+            'mysql+mysqldb://{}:{}@{}/{}'.format(
+                db_user,
+                db_password,
+                db_host,
+                db_database),
+            pool_pre_ping=True)
 
         if db_env == "test":
             Base.metadata.drop_all(self.__engine)
