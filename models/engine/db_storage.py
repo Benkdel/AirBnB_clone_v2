@@ -40,7 +40,7 @@ class DBStorage:
     def all(self, cls=None):
         """Returns the list of objects of one type of class or all"""
         dict_return = {}
-        if cls:
+        if cls is not None:
             results = self.__session.query(cls).all()
             for item in results:
                 key = "{}.{}".format(type(item).__name__, item.id)
