@@ -14,7 +14,7 @@ sys.path.append('../')
 app = Flask(__name__)
 
 
-@app.route('/cities_by_state', strict_slashes=False)
+@app.route('/cities_by_states', strict_slashes=False)
 def displayCitiesByState():
     """
         Url serving DB data
