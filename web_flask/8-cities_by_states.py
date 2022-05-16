@@ -3,19 +3,19 @@
     Script to init flask application
 """
 
+from models.state import State
+from models import storage
 import sys
 from flask import Flask, render_template
 
 sys.path.append('../')
 
-from models.state import State
-from models import storage
 
 app = Flask(__name__)
 
 
 @app.route('/cities_by_state', strict_slashes=False)
-def displayStatesList():
+def displayCitiesByState():
     """
         Url serving DB data
     """
